@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
+import styles from './styles.module.css';
 
 export function Header() {
     return (
-        <header>
+        <header className={styles.header}>
             <span>
                 <Link to="/">Wall</Link>
             </span>

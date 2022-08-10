@@ -1,11 +1,15 @@
 import { Outlet } from 'react-router-dom';
 import { Header } from './components/Header';
+import styles from './App.module.css';
+import './global.css';
 
 function App() {
     return (
         <>
             <Header />
-            <Outlet />
+            <div className={styles.wrapper}>
+                <Outlet />
+            </div>
         </>
     );
 }

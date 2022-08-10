@@ -1,3 +1,9 @@
+import { PostList } from '../../components/PostList';
+
 export function Wall() {
-    return <h1>Wall</h1>;
+    return (
+        <>
+            <PostList />
+        </>
+    );
 }
