@@ -1,16 +1,20 @@
+import { PaperPlaneRight } from 'phosphor-react';
+import styles from './styles.module.css';
+
 export function PostForm() {
     return (
-        <section>
-            <h3>Create a new post</h3>
-            <form>
-                <div>
-                    <input type="text" name="title" />
-                </div>
-                <div>
-                    <textarea name="body" />
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+        <article className={styles.postForm}>
+            <header>
+                <strong>Enter your post content:</strong>
+            </header>
+            <hr />
+            <textarea className={styles.body}></textarea>
+            <div className={styles.row}>
+                <button type="submit" className={styles.submit}>
+                    <PaperPlaneRight size={24} />
+                    Send
+                </button>
+            </div>
+        </article>
     );
 }

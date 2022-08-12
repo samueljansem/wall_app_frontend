@@ -1,0 +1,53 @@
+.postForm {
+    background: var(--gray-800);
+    border-radius: 8px;
+    padding: 1rem 2.5rem 2.5rem 2.5rem;
+}
+
+.postForm > header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.postForm > hr {
+    margin: .5rem 0;
+    height: 1px;
+    border: none;
+    background-color: var(--gray-600);
+}
+
+.body {
+    width: 40rem;
+    height: 10rem;
+    border: none;
+    border-radius: 8px;
+    padding-top: .5rem;
+    background-color: var(--gray-600);
+}
+
+.submit {
+    background: transparent;
+    color: var(--green-500);
+    border: 1px solid var(--green-500);
+    border-radius: 0.5rem;
+    height: 50px;
+    padding: 0 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    transition: color 0.1s, background 0.1s;
+}
+
+.row {
+    padding-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
