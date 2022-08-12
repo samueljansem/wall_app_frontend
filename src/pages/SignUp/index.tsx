@@ -1,3 +1,5 @@
+import { SignUpForm } from '../../components/SignUpForm';
+
 export function SignUp() {
-    return <h1>SignUp</h1>;
+    return <SignUpForm />;
 }
