@@ -25,11 +25,7 @@ export function PostList() {
             {posts.map((post) => (
                 <article key={post.id} className={styles.post}>
                     <header>
-                        <strong>
-                            <Link to={`/users/${post.author}`}>
-                                @{post.author}
-                            </Link>
-                        </strong>
+                        <strong>@{post.author}</strong>
                         <time
                             title={publishedDateFormatted(post.created)}
                             dateTime={post.created}

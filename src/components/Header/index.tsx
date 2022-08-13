@@ -17,11 +17,7 @@ export function Header() {
             <div className={styles.links}>
                 {authenticated ? (
                     <>
-                        <span className={styles.sm}>
-                            <Link to={`/users/${user?.username}`}>
-                                Hi, {user?.username}
-                            </Link>
-                        </span>
+                        <span className={styles.sm}>Hi, {user?.username}</span>
                         <span className={styles.sm}>
                             <a href="#" onClick={handleLogout}>
                                 Logout

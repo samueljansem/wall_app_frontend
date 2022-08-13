@@ -5,7 +5,7 @@ import {
     Navigate,
 } from 'react-router-dom';
 import App from '../App';
-import { Wall, Login, SignUp, NotFound, Profile } from '../pages';
+import { Wall, Login, SignUp, NotFound } from '../pages';
 import { useAuth } from '../hooks/useAuth';
 
 export function AppRouter() {
@@ -27,9 +27,6 @@ export function AppRouter() {
                         }
                         path="/signup"
                     />
-                    <Route path="/users">
-                        <Route element={<Profile />} path=":username" />
-                    </Route>
                     <Route element={<NotFound />} path="*" />
                 </Route>
             </Routes>
