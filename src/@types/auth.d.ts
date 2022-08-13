@@ -21,8 +21,9 @@ export interface AuthProviderProps {
 
 export interface AuthContextData {
     user: User | null;
-    authenticated: boolean;
     tokens: AuthTokens | null;
+    setTokens: (tokens: AuthTokens) => void;
+    authenticated: boolean;
     signup: (credentials: UserSignupInput) => Promise<void>;
     login: (credentials: UserLoginInput) => Promise<void>;
     logout: () => void;

@@ -9,7 +9,10 @@ export interface Post {
     updated: datetime;
 }
 
-export type PostInput = Omit<Post, 'author' | 'created' | 'updated' | 'id'>;
+export type PostInput = Omit<
+    Post,
+    'author' | 'authorId' | 'created' | 'updated' | 'id'
+>;
 
 export interface PostsProviderProps {
     children: ReactNode;
@@ -17,5 +20,5 @@ export interface PostsProviderProps {
 
 export interface PostsContextData {
     posts: Post[];
-    createPost: (post: Post) => Promise<void>;
+    createPost: (post: PostInput) => Promise<void>;
 }

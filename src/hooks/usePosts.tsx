@@ -5,12 +5,13 @@ import {
     PostsContextData,
     PostsProviderProps,
 } from '../@types/post';
-import { api } from '../services/api';
+import { useApi } from './useApi';
 
 const PostsContext = createContext<PostsContextData>({} as PostsContextData);
 
 export function PostsProvider({ children }: PostsProviderProps) {
     const [posts, setPosts] = useState<Post[]>([]);
+    const api = useApi();
 
     useEffect(() => {
         api.get('/posts/').then((response) => {
@@ -19,9 +20,9 @@ export function PostsProvider({ children }: PostsProviderProps) {
     }, []);
 
     async function createPost(postInput: PostInput) {
-        const response = await api.post('/posts/create', postInput);
+        const response = await api.post('/posts/create/', postInput);
 
-        setPosts([...posts, response.data]);
+        setPosts([response.data, ...posts]);
     }
 
     return (
