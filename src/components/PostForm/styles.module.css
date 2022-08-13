@@ -1,29 +1,31 @@
-.postForm {
+.wrapper {
     background: var(--gray-800);
     border-radius: 8px;
-    padding: 1rem 2.5rem 2.5rem 2.5rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
 }
 
-.postForm > header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.postForm > hr {
+.wrapper > hr {
     margin: .5rem 0;
     height: 1px;
     border: none;
     background-color: var(--gray-600);
 }
 
-.body {
-    width: 40rem;
-    height: 10rem;
-    border: none;
-    border-radius: 8px;
+.form {
     padding-top: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.body {
+    border: none;
+    width: 100%;
+    height: 8rem;
+    border-radius: 8px;
+    padding: .5rem;
     background-color: var(--gray-600);
+    color: var(--gray-200);
 }
 
 .submit {
@@ -40,14 +42,17 @@
     align-items: center;
     justify-content: center;
 
+
     gap: 0.5rem;
 
     transition: color 0.1s, background 0.1s;
 }
 
+.container {
+    display: flex;
+}
+
 .row {
     padding-top: .5rem;
-    display: flex;
-    align-items: center;
-    justify-content: end;
+    flex: 1;
 }

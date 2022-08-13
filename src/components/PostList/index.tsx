@@ -2,6 +2,7 @@ import { usePosts } from '../../hooks/usePosts';
 import { format, formatDistanceToNow } from 'date-fns';
 import enUS from 'date-fns/esm/locale/en-US';
 import styles from './styles.module.css';
+import { Link } from 'react-router-dom';
 
 export function PostList() {
     const { posts } = usePosts();
@@ -24,7 +25,11 @@ export function PostList() {
             {posts.map((post) => (
                 <article key={post.id} className={styles.post}>
                     <header>
-                        <strong>@{post.author}</strong>
+                        <strong>
+                            <Link to={`/users/${post.author}`}>
+                                @{post.author}
+                            </Link>
+                        </strong>
                         <time
                             title={publishedDateFormatted(post.created)}
                             dateTime={post.created}
