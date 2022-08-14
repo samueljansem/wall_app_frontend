@@ -12,6 +12,12 @@
 $ yarn
 ```
 
+#### Add your backend api url to .env file:
+
+```text
+VITE_API_BASE_URL="API_BASE_URL"
+```
+
 #### Run the project:
 
 ```shell

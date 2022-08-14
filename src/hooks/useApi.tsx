@@ -4,7 +4,7 @@ import { useAuth } from './useAuth';
 import jwt from 'jwt-decode';
 import dayjs from 'dayjs';
 
-const baseUrl = 'http://localhost:8000/api';
+const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
 export function useApi(): AxiosInstance {
     const { setTokens } = useAuth();
@@ -28,8 +28,6 @@ export function useApi(): AxiosInstance {
 
         const isExpired =
             dayjs.unix(parseInt(decodedValue.exp)).diff(dayjs()) < 1;
-
-        console.log(isExpired);
 
         if (!isExpired) return config;
 
